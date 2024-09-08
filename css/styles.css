@@ -44,12 +44,14 @@ button {
 .btn {
 	width: 316px;
 	height: 56px;
+	border: none;
 	background-color: var(--pink);
 	color: var(--white);
 	font-weight: 600;
 	font-size: 18px;
 	font-family: Inter;
 	transition: text-shadow 0.5s;
+	cursor: pointer;
 }
 
 .btn:hover {
@@ -233,6 +235,7 @@ video {
 	gap: 50px;
 	grid-template-areas: "title title"
 						 "left right";
+	padding-top: 50px;
 	margin-bottom: 200px;
 }
 
@@ -312,10 +315,18 @@ video {
 	padding-right: 25px;
 }
 
+.btn-to-top-wrap {
+	padding-bottom: 40px;
+}
+
+.btn-to-top-wrap .wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+	padding: 10px 106px;
+}
+
 .btn-to-top {
-	position: absolute;
-	top: -100px;
-    right: 343px;
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
@@ -351,6 +362,14 @@ footer {
 
 .email-list, .address-list {
 	margin-left: 40px;
+}
+
+.email-list a {
+	color: var(--lightgrey);
+}
+
+.email-list a:hover {
+	color: var(--pink);
 }
 
 .decor {
@@ -484,6 +503,7 @@ footer {
 	.player-btn {
 		top: 23vw;
 	}
+
 }
 
 @media (max-width: 1130px) {
@@ -528,6 +548,7 @@ footer {
 	.achievments {
 		padding-left: 30px;
 	}
+
 }
 
 @media (max-width: 800px) {
@@ -541,7 +562,7 @@ footer {
 		height: auto;
 	}
 	.header-menu {
-		padding-top: 20px;
+		padding-top: 30px;
 	}
 	.motto__text {
 		text-align: center;
@@ -567,8 +588,14 @@ footer {
 		flex-direction: column;
 		padding: 20px 20px 15px;
 	}
-	.btn-to-top {
-		display: none;
+
+	.btn-to-top-wrap .wrap {
+		justify-content: center;
+		padding: 10px 0;
+	}
+
+	.pre-footer {
+		padding: 10px 26px;
 	}
 }
 
@@ -616,6 +643,13 @@ footer {
 	}
 	.about__right img {
 		width: 100%;
+	}
+	.btn {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.modal {
+		width: 90%;
 	}
 }
   
