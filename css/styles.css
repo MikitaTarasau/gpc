@@ -119,6 +119,8 @@ header .wrap {
 
 .motto {
 	padding: 300px 0 500px;
+	position: relative;
+	overflow: hidden;
 }
 
 .motto__text {
@@ -194,7 +196,7 @@ video {
 }
 
 .player-btn {
-	display: none;
+	display: block;
 	position: absolute;
 	top: 264px;
 	left: calc(50% - 50px);
@@ -203,15 +205,19 @@ video {
 	background: url(../img/icons/play.png) no-repeat center center;
 	background-size: 85px 85px;
 	cursor: pointer;
-	transition: background-size 0.3s;
+	transition: background-size 0.3s, display 2s;
 }
 
 .video-wrap:hover .player-btn {
 	display: block;
 }
 
-.player-btn.pause{
+.player-btn.pause {
 	background: url(../img/icons/pause.png) no-repeat center center;
+}
+
+.player-btn.hide {
+	display: none;
 }
 
 .player-btn:hover {
@@ -448,6 +454,11 @@ footer {
 	margin-bottom: 24px;
 }
 
+.modal-contacts {
+	display: block;
+	margin: 0 auto;
+}
+
 .checkbox-wrap {
 	display: flex;
 	gap: 13px;
@@ -549,6 +560,12 @@ footer {
 		padding-left: 30px;
 	}
 
+	.intro__text {
+		text-align: center;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
 }
 
 @media (max-width: 800px) {
@@ -566,11 +583,6 @@ footer {
 	}
 	.motto__text {
 		text-align: center;
-	}
-	.intro__text {
-		text-align: center;
-		padding-left: 40px;
-		padding-right: 40px;
 	}
 
 	.player-btn {
@@ -652,4 +664,3 @@ footer {
 		width: 90%;
 	}
 }
-  

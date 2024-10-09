@@ -39,6 +39,9 @@
 		<div class="wrap">
    			<p class="motto__text inner-wrap">WE HAVE BEEN IN THE AUDIOVISUAL PRODUCTION BUSINESS FOR OVER <span class="motto__text--bold">15 YEARS</span></p>
 		</div>
+		<div class="first-circle decor">&nbsp;</div>
+		<div class="second-circle decor">&nbsp;</div>
+		<div class="third-circle decor">&nbsp;</div>
    	</section>
 	<section class="intro">
 		<div class="wrap">
@@ -229,23 +232,21 @@
 			</ul>
 	   </div>		
    	</footer>
-	<div class="first-circle decor">&nbsp;</div>
-	<div class="second-circle decor">&nbsp;</div>
-	<div class="third-circle decor">&nbsp;</div>
 	<div class="veil">
 		<div class="modal">
 			<div class="close">&nbsp;</div>
-			<form autocomplete="off" action="email.php" method="post">
+			<img src="img/contacts.png" class="modal-contacts" />
+			<!--<form autocomplete="off" action="mail.php" method="post">
 				<label class="modal-text">How should we call you?*</label>
-				<input type="text" placeholder="Name" required />
+				<input type="text" placeholder="Name" name="name" required />
 				<label class="modal-text">Email*</label>
-				<input type="email" placeholder="Email*" required />
+				<input type="email" placeholder="Email*" name="email"  />
 				<div class="checkbox-wrap">
 					<input type="checkbox" id="policy" />
 					<label for="policy">I agree to the processing of personal data and agree with the privacy policy.</label>
 				</div>
 				<input type="submit" class="btn" value="Submit request" />
-			</form>
+			</form>-->
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
@@ -278,6 +279,7 @@
 						else {
 							video.play();
 							playBtn.classList.add('pause');
+							setTimeout(() => playBtn.classList.add('hide'), 1000);
 						}
 					}
 
