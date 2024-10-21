@@ -27,11 +27,11 @@
    		<div class="wrap">
    			<img class="header-logo" src="img/logo-header.PNG" width="140" alt="General Producer Center" />
 	   		<nav class="header-menu">
-	   			<a href="#wildNature" id="toWildNature" class="header-menu__item">Wild nature</a>
-	   			<a href="#cultureArt" id="toCultureAndArt" class="header-menu__item">Culture&Art</a>
+	   			<a href="#" id="toWildNature" class="header-menu__item">Wild nature</a>
+	   			<a href="#" id="toCultureAndArt" class="header-menu__item">Culture&Art</a>
 	   			<!--<a href="#coProduction" id="toCoProduction" class="header-menu__item">Co-production</a>-->
-	   			<a href="#about" id="toAbout" class="header-menu__item">About us</a>
-	   			<a href="#contacts" id="toContacts" class="header-menu__item">Contacts</a>
+	   			<a href="#" id="toAbout" class="header-menu__item">About us</a>
+	   			<a href="#" id="toContacts" class="header-menu__item">Contacts</a>
 	   		</nav>
    		</div>
    	</header>
@@ -252,10 +252,7 @@
 	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript">
-		function topFunction() {
-			document.body.scrollTop = 0; // For Safari
-			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-		} 
+
 		$(document).ready(function(){
 			$('.slider-initial').slick({
 				arrows: true,
@@ -287,7 +284,16 @@
 				});
 			}
 
+			//scrolling
 			$('.btn-to-top').on('click',function() {  $("html, body").animate({ scrollTop: 0 }, 1300);});
+
+			$('#toWildNature').on('click',function() {  $("html, body").animate({ scrollTop: 1257 }, 1000);});
+
+			$('#toCultureAndArt').on('click',function() {  $("html, body").animate({ scrollTop: 2451 }, 1300);});
+
+			$('#toAbout').on('click',function() {  $("html, body").animate({ scrollTop: 3596 }, 1600);});
+
+			$('#toContacts').on('click',function() {  $("html, body").animate({ scrollTop: 4380 }, 1900);});
 
 			$('.pre-footer .btn').on( "click", function() {
 				$('.veil').fadeIn();
@@ -295,9 +301,13 @@
 
 			$('.close').on( "click", function() {
 				$('.veil').fadeOut();
-			} );
+			});
 
 		});
+		window.addEventListener("scroll", (event) => {
+                let scroll = this.scrollY;
+                console.log(scroll);
+            });
 	</script>
    </body>
 </html>
